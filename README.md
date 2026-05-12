@@ -451,17 +451,21 @@ This keeps the frontend lightweight while allowing cloud-based resource manageme
 ```text
 project/
 │
-├── app.py
-├── README.md
-├── requirements.txt
-├── best_malaria_model.keras
+├── app.py                         # Hugging Face Gradio application
+├── README.md                      # Project documentation
+├── requirements.txt               # Dependencies
+├── best_malaria_model.keras       # Trained lightweight CNN model
 │
-├── Dataset/
-│   ├── Train/
-│   ├── Validation/
-│   └── Test/
-```
+├── training/
+│   ├── train_model.ipynb          # Training pipeline
+│   ├── evaluate_model.ipynb       # Evaluation & testing
+│
+├── assets/
+│   ├── architecture.png
+│   ├── confusion_matrix.png
+│   └── predictions.png
 
+```
 ---
 
 # ⚠️ Disclaimer
