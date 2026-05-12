@@ -18,7 +18,7 @@
 # 🚀 Live Demo
 
 > ## 🌐 Hugging Face Deployment
-> https://huggingface.co/spaces/paulaman1/Malaria-classifier
+> https://huggingface.co/spaces/paulaman1/single-cell-malaria-analyzer
 
 ---
 
