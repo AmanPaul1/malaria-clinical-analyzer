@@ -35,7 +35,6 @@ graph TD
     J --> K[GlobalAveragePooling2D]
     K --> L[Dense Output: 1 Unit, Sigmoid]
 
-
 Instead of relying on heavy, computationally expensive pre-trained models, I engineered a highly optimized, custom Convolutional Neural Network tailored specifically for edge-device deployment in healthcare.
 
 * **Ultra-Lightweight Footprint:** The entire architecture contains only **8,700 parameters**, utilizing `SeparableConv2D` layers to drastically reduce computational cost while maintaining spatial feature extraction.
