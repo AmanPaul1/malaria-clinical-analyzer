@@ -19,6 +19,7 @@
 An end-to-end medical vision pipeline developed to classify single-cell microscopy images for Malaria (*Plasmodium falciparum*) diagnosis. Built on the **NLM-Falciparum-Thin-Cell-Images** dataset from the National Library of Medicine, this project bridges the gap between research and deployment by focusing on extreme computational efficiency and clinical safety constraints.
 
 ## 🧠 Model Architecture & Training
+
 ### 🏗️ Network Flow Diagram
 ```mermaid
 graph TD
@@ -33,6 +34,8 @@ graph TD
     I --> J[SeparableConv2D: 64 Filters, 3x3]
     J --> K[GlobalAveragePooling2D]
     K --> L[Dense Output: 1 Unit, Sigmoid]
+
+
 Instead of relying on heavy, computationally expensive pre-trained models, I engineered a highly optimized, custom Convolutional Neural Network tailored specifically for edge-device deployment in healthcare.
 
 * **Ultra-Lightweight Footprint:** The entire architecture contains only **8,700 parameters**, utilizing `SeparableConv2D` layers to drastically reduce computational cost while maintaining spatial feature extraction.
@@ -59,14 +62,19 @@ Standard AI models often output raw probabilities that force binary decisions, w
 
 ## 🚀 How to Run Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/AmanPaul1/malaria-clinical-analyzer.git
-   cd malaria-clinical-analyzer
-   pip install -r requirements.txt
-   # On Windows (Command Prompt)
-    set HF_TOKEN=your_token_here
+You can run the entire setup using this single script:
 
-   # On Mac/Linux
-     export HF_TOKEN="your_token_here"
-   python app.py ```
+```bash
+# 1. Clone the repository and open folder
+git clone [https://github.com/AmanPaul1/malaria-clinical-analyzer.git](https://github.com/AmanPaul1/malaria-clinical-analyzer.git)
+cd malaria-clinical-analyzer
+
+# 2. Install required dependencies
+pip install -r requirements.txt
+
+# 3. Set your Hugging Face Token (Uncomment the one for your OS)
+set HF_TOKEN=your_token_here        # For Windows (Command Prompt)
+# export HF_TOKEN="your_token_here" # For Mac/Linux
+
+# 4. Launch the application
+python app.py
